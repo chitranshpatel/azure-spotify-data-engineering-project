@@ -1,0 +1,9 @@
+{
+	"name": "cp-df-azureproject",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2b0f66d9-a31d-44c6-af15-0840c467650d",
+		"tenantId": "ef7a487a-77ca-410a-803d-e426b62a587f"
+	}
+}
