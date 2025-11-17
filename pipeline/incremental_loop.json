@@ -70,7 +70,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "azure_sql",
+									"referenceName": "spotify_azure_sql",
 									"type": "DatasetReference"
 								}
 							],
@@ -117,7 +117,7 @@
 									}
 								},
 								"dataset": {
-									"referenceName": "Json_dynamic",
+									"referenceName": "Json_dynamic_spotify",
 									"type": "DatasetReference",
 									"parameters": {
 										"container": "bronze",
@@ -217,7 +217,7 @@
 										},
 										"userProperties": [],
 										"linkedServiceName": {
-											"referenceName": "AzureSqlDatabase1",
+											"referenceName": "spotify_azure_sql",
 											"type": "LinkedServiceReference"
 										},
 										"typeProperties": {
@@ -286,7 +286,7 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "Json_dynamic",
+												"referenceName": "Json_dynamic_spotify",
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
@@ -300,7 +300,7 @@
 										],
 										"outputs": [
 											{
-												"referenceName": "Json_dynamic",
+												"referenceName": "Json_dynamic_spotify",
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",

@@ -31,7 +31,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECt * FROM @{pipeline().parameters.schema}.@{pipeline().parameters.table} WHERE @{pipeline().parameters.cdc_col} > '@{if(empty(pipeline().parameters.from_date),activity('last_cdc').output.value[0].cdc,pipeline().parameters.from_date)}'",
+							"value": "SELECT * FROM @{pipeline().parameters.schema}.@{pipeline().parameters.table} WHERE @{pipeline().parameters.cdc_col} > '@{if(empty(pipeline().parameters.from_date),activity('last_cdc').output.value[0].cdc,pipeline().parameters.from_date)}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -58,7 +58,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "azure_sql",
+						"referenceName": "spotify_azure_sql",
 						"type": "DatasetReference"
 					}
 				],
@@ -105,7 +105,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "Json_dynamic",
+						"referenceName": "Json_dynamic_spotify",
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "bronze",
@@ -205,7 +205,7 @@
 							},
 							"userProperties": [],
 							"linkedServiceName": {
-								"referenceName": "AzureSqlDatabase1",
+								"referenceName": "spotify_azure_sql",
 								"type": "LinkedServiceReference"
 							},
 							"typeProperties": {
@@ -274,7 +274,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "Json_dynamic",
+									"referenceName": "Json_dynamic_spotify",
 									"type": "DatasetReference",
 									"parameters": {
 										"container": "bronze",
@@ -288,7 +288,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "Json_dynamic",
+									"referenceName": "Json_dynamic_spotify",
 									"type": "DatasetReference",
 									"parameters": {
 										"container": "bronze",

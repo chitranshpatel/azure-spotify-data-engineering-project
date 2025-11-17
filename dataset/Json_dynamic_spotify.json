@@ -1,8 +1,8 @@
 {
-	"name": "Json_dynamic",
+	"name": "Json_dynamic_spotify",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage1",
+			"referenceName": "spotifydatalake",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {

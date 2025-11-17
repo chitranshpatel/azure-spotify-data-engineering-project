@@ -2,7 +2,7 @@
 	"name": "Parquet_dynamic",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage1",
+			"referenceName": "spotifydatalake",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
