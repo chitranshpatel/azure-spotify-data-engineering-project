@@ -70,7 +70,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "azure_sql",
+									"referenceName": "spotify_azure_sql",
 									"type": "DatasetReference"
 								}
 							],
@@ -117,7 +117,7 @@
 									}
 								},
 								"dataset": {
-									"referenceName": "Json_dynamic",
+									"referenceName": "Json_dynamic_spotify",
 									"type": "DatasetReference",
 									"parameters": {
 										"container": "bronze",
@@ -217,7 +217,7 @@
 										},
 										"userProperties": [],
 										"linkedServiceName": {
-											"referenceName": "AzureSqlDatabase1",
+											"referenceName": "spotify_azure_sql",
 											"type": "LinkedServiceReference"
 										},
 										"typeProperties": {
@@ -286,7 +286,7 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "Json_dynamic",
+												"referenceName": "Json_dynamic_spotify",
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
@@ -300,7 +300,7 @@
 										],
 										"outputs": [
 											{
-												"referenceName": "Json_dynamic",
+												"referenceName": "Json_dynamic_spotify",
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
@@ -341,7 +341,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"method": "POST",
-					"url": "https://prod-29.australiaeast.logic.azure.com:443/workflows/1827d53e6c8d4bd29e8c07fafdd1fb32/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=wh8TvP1YDOFVPODytE50mTW_zPkFdEeS4Y3bQQqhAe4",
+					"url": "https://prod-22.australiaeast.logic.azure.com:443/workflows/6e40ff8b579b428e82d47e3930657c86/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=jSwSSM74u4XSKqiZOjv_3oi_spbiUJd9cBr8uQjbEIg",
 					"body": {
 						"value": "{\n    \"pipeline_name\" : \"@{pipeline().Pipeline}\",\n    \"pipeline_runId\" : \"@{pipeline().RunId}\"\n}",
 						"type": "Expression"
